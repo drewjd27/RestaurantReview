@@ -2,7 +2,7 @@ package com.example.restaurantreview
 
 import com.google.gson.annotations.SerializedName
 
- class RestaurantResponse(
+data class RestaurantResponse(
 
 	@field:SerializedName("restaurant")
 	val restaurant: Restaurant,
@@ -14,7 +14,7 @@ import com.google.gson.annotations.SerializedName
 	val message: String
 )
 
- class Restaurant(
+data class Restaurant(
 
 	@field:SerializedName("customerReviews")
 	val customerReviews: List<CustomerReviewsItem>,
@@ -26,7 +26,7 @@ import com.google.gson.annotations.SerializedName
 	val name: String,
 
 	@field:SerializedName("rating")
-	val rating: Any,
+	val rating: Double,
 
 	@field:SerializedName("description")
 	val description: String,
@@ -35,7 +35,7 @@ import com.google.gson.annotations.SerializedName
 	val id: String
 )
 
- class CustomerReviewsItem(
+data class CustomerReviewsItem(
 
 	@field:SerializedName("date")
 	val date: String,
